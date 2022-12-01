@@ -1,0 +1,42 @@
+PROCEDURE procedure_Read (VAR tab:ARRAY_OF FLOAT,n,m:INTEGER)
+VAR
+  i,j:INTEGER;
+BEGIN
+  FOR i FROM 0 TO n-1 STEP 1 DO
+    FOR j FROM 0 TO m-1 STEP 1 DO
+      Read(t[i][j]);
+    END_FOR
+   END_FOR
+END
+PROCEDURE dot_product(VAR tab:ARRAY_OF FLOAT,v,w:ARRAY_OF FLOAT ps:FLOAT)
+VAR
+  j:INTEGER
+  
+BEGIN
+FOR j FROM 0 TO m-1 STEP 1 DO
+  set_instructions
+END_FOR
+  ps:=ps+(v[j]*w[j])
+END
+ALGORITHM main_algo
+VAR
+  tab:ARRAY_OF FLOAT[50][50];
+  n,m:INTEGER;
+  ps: FLOAT:=0;
+BEGIN
+  REPEAT
+    Read(n);
+  UNTIL (n>=2 AND n<=50)
+  REPEAT
+    Read(m):
+  UNTIL (m>=1 AND m<=50)
+  procedure_Read(tab,n,m);
+  FOR i FROM 0 TO n-1 STEP 1 DO
+  
+  dot_product(tab[i]tab[i+1],ps)
+  IF (ps=0) THEN
+    Write (tab[i,] "AND" tab[i+1 "are orthogonal"])
+  END_IF
+    
+  END_FOR
+END
